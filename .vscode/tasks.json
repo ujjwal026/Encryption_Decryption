@@ -1,0 +1,28 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "build",
+            "type": "shell",
+            "command": "g++",
+            "args": [
+                "-std=c++17",
+                "-g",
+                "-o",
+                "${workspaceFolder}/encrypt_decrypt.exe",  // Adjust the output executable name
+                "${workspaceFolder}/main.cpp",  // Include your main source file
+                "${workspaceFolder}/src/app/processes/ProcessManagement.cpp",
+                "${workspaceFolder}/src/app/fileHandling/IO.cpp",
+                "${workspaceFolder}/src/app/fileHandling/ReadEnv.cpp",
+                "${workspaceFolder}/src/app/encryptDecrypt/Cryption.cpp"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": ["$gcc"],
+            "detail": "Generated task by g++"
+        }
+    ]
+}
+

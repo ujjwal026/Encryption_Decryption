@@ -1,0 +1,52 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Debug encrypt_decrypt",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/encrypt_decrypt.exe",  // Ensure this matches the output file name
+            "args": [],
+            "cwd": "${workspaceFolder}",
+            "stopAtEntry": false,
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "gdb",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ],
+            "preLaunchTask": "build",
+            "setupCommands": [
+                {
+                    "text": "-enable-pretty-printing",
+                    "description": "Enable pretty printing for gdb",
+                    "ignoreFailures": true
+                }
+            ]
+        },
+        {
+            "name": "Debug cryption (standalone)",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/cryption.exe",  // Ensure this matches the output file name
+            "args": ["your_task_data_here"],  // Replace with actual arguments needed
+            "cwd": "${workspaceFolder}",
+            "stopAtEntry": false,
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "gdb",
+            "setupCommands": [
+                {
+                    "text": "-enable-pretty-printing",
+                    "description": "Enable pretty printing for gdb",
+                    "ignoreFailures": true
+                }
+            ],
+            "preLaunchTask": "build"
+        }
+    ]
+}
